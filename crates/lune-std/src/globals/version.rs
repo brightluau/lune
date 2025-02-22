@@ -30,6 +30,6 @@ pub fn create(lua: &Lua) -> LuaResult<LuaValue> {
 */
 pub fn set_global_version(lua: &Lua, version: impl Into<String>) {
     let v = version.into();
-    let _ = get_version_string(&v); // Validate version string
+    // let _ = get_version_string(&v); // Validate version string
     lua.set_app_data(Version(v));
 }
